@@ -31,7 +31,7 @@ the configuration describes the following steps:
          csv_output.py - implementation of loading output data to csv file, according to file name configuration
 ### data (folder)
    used as an input source for demonstration purposes 
-   folder structure is data/<table-name>/file (e.g. data/input/usage/
+   folder structure is data/\<table-name\>/file (e.g. data/input/usage/
                                                                      2023-06-18.csv
                                                                      2023-06-19.csv)
 
