@@ -1,15 +1,14 @@
 # etl_pipeline
-etl plipeline
 Basic modular ETL pipeline 
-the system decouples pipeline from implementationa, in a way that allows modularity
+the system decouples pipeline from implementation, in a way that allows modularity of each of the steps, as following:  
 
 ### extract -> transformation (one or more) -> loads (one or more)
 each implementation is suplementad by its rellevant parameters from the parameter configuration file.
 ### main files and folders:
 #### etl.py - the pipeline main
   the module is orchestrating the etl
-  it reads the configuration file, and calls the run method of the implementation with its preconfigured set of parametes 
-  and pandas datafreame (for transformation and loads)
+  it reads the configuration file, and executes the run method of the implementation with its preconfigured set of parametes 
+  and pandas datafreame from previos stage (except for extract, that provides the 1st dataframe)
 
 #### config/parameters.json 
 configurtion file that contains the parameters for implementation
@@ -48,6 +47,6 @@ ii. virtualenv (pip install virtualenv)
 3. python -m venv .
 4. . ./bin/activate
 5. pip install -r requirements.txt
-## Execution: 
+## Execution (full etl exacution according to configuration and implementations): 
 python etl.py
 
