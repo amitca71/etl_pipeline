@@ -1,0 +1,5 @@
+account_id,user_id,amount,status
+1,1,280.0,error
+2,2,390.6,success
+1,1,460.0,success
+2,2,20.0,success
