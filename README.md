@@ -24,7 +24,6 @@ sample content:
                     {"impl_name":"aggregate", "dimension":"user_id" , "aggregate_column": "amount"}]',
      "loads": '[{"impl_name":"csv_output", "output_file_path": "/tmp/success_aggregated_by_user_id.csv"}]' }  
 above implementaion would perform the follwoing steps:
-#### current implelementation steps:
 1. read csv files from: data/usage
 2. filter out errored records
 3. aggregats amount group by user_id
