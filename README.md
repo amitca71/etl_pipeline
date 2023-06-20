@@ -17,7 +17,21 @@ the configuration describes the following steps:
 -  extract source
 -  lists of transformation implementations
 -  list of loads
+sample content:
+ {
+     "extract": '{"impl_name":"csv_extract", "table_name": "usage"}',
+     "transform": '[{"impl_name":"filter_out", "field":"status" , "value": "error"},\
+                    {"impl_name":"aggregate", "dimension":"user_id" , "aggregate_column": "amount"}]',
+     "loads": '[{"impl_name":"csv_output", "output_file_path": "/tmp/success_aggregated_by_user_id.csv"}]'
 
+ }
+above implementaion would perform the follwoing steps:
+#### current implelementation steps:
+1. read csv files from: data/usage
+2. filter out errored records
+3. aggregats amount group by user_id
+4. write the data to file: /tmp/success_aggregated_by_user_id.csv
+   
 #### implementations - root folder for the different implementations, with sub folders:
   the implementation file dscribed below are basic implementations that can easily be replaced 
   by others, and be called according to different configuration
@@ -48,5 +62,5 @@ ii. virtualenv (pip install virtualenv)
 4. . ./bin/activate
 5. pip install -r requirements.txt
 #### Execution (full etl exacution according to configuration and implementations): 
-python etl.py
+python etl.py 
 
