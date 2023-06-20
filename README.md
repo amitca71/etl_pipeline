@@ -39,7 +39,7 @@ etl_helper.py - implements generic methods, that can be used by other modules
 
 ## Instructions:
 #### pre requisite:
-i. python 3.7 + 
+i. python 3.7 +  
 ii. virtualenv (pip install virtualenv)
 ## installation:
 1. clone the repository (git clone https://github.com/amitca71/etl_pipeline.git)
