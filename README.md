@@ -48,5 +48,6 @@ ii. virtualenv (pip install virtualenv)
 3. python -m venv .
 4. . ./bin/activate
 5. pip install -r requirements.txt
-6. python etl.py
+## Execution: 
+python etl.py
 
