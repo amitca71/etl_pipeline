@@ -1,5 +1,5 @@
 # etl_pipeline
-Basic modular ETL pipeline 
+Basic modular ETL pipeline   
 the system decouples pipeline from implementation, in a way that allows modularity of each of the steps, as following:  
 
 ### extract -> transformation (one or more) -> loads (one or more)
